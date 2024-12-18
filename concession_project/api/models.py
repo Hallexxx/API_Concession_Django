@@ -1,6 +1,7 @@
 from django.db import models
 
 class Concession(models.Model):
+    # Modèle pour une concession automobile
     nom = models.CharField(max_length=100)
     numero_siret = models.BigIntegerField(null=True, blank=True)
     code_postal = models.CharField(max_length=5)
@@ -10,6 +11,7 @@ class Concession(models.Model):
         return self.nom
 
 class Vehicule(models.Model):
+    # Modèle pour un véhicule
     marque = models.CharField(max_length=100)
     modele = models.CharField(max_length=100)
     chevaux = models.IntegerField()
